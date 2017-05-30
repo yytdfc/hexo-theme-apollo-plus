@@ -31,7 +31,7 @@
         position: relative;
         margin: 1em 0;
         a:before {
-            content: "#";
+            content: "■";
             color: #42b983;
             position: absolute;
             left: -0.7em;
@@ -46,8 +46,12 @@
         }
     }
 
-    h2, h3 {
-        font-size: 42px;
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
     }
 
     h4, h5, h6 {
