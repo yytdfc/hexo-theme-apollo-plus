@@ -1,8 +1,18 @@
+mixin postInfoDetail(item)
+    .post-info
+        != full_date(item.date, 'll')
+        if item.from && (is_home() || is_post())
+            a.post-from(href=item.from target="_blank" title=item.from) 翻译 · 原文地址
+        if theme.busuanzicount
+            full_date(item.date, 'll') &#8853 <span id="busuanzi_container_page_pv">Viewed<span id="busuanzi_value_page_pv"></span> times</span>
+
 mixin postInfo(item)
     .post-info
         != full_date(item.date, 'll')
         if item.from && (is_home() || is_post())
             a.post-from(href=item.from target="_blank" title=item.from) 翻译 · 原文地址
+
+
 
 //- Index Page
 mixin posts()
@@ -28,7 +38,7 @@ mixin postList()
             - var itemYear = date(item.date, 'YYYY') - 0;
             - change = year !== itemYear;
             - year = change ? itemYear : year;
-            if change 
+            if change
                 h2.archive-year!= year
             .post-item
                 +postInfo(item)
@@ -42,6 +52,6 @@ mixin post(item)
         article.post-block
             h1.post-title
                 != item.title
-            +postInfo(item)
+            +postInfoDetail(item)
             .post-content
                 != item.content

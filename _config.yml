@@ -1,22 +1,26 @@
 menu:
     Blog: /
     Archive: /archives/
-    Weibo: http://weibo.com/sunchongsheng
-    GitHub: https://github.com/pinggod
-    Rss: /atom.xml
+    Tags: /tags/
+    # Weibo: http://weibo.com/sunchongsheng
+    GitHub: https://github.com/yytdfc
+    About: /about/
+    # Rss: /atom.xml
 
-favicon: /favicon.png
-logo: /favicon.png
+favicon: /images/favicon.png
+logo: /images/logo.png
 
 # Comment
 # e.g disqus: seansun
 disqus:
 duoshuo:
-cloudTie:
+cloudTie: b710aea8146b4b82be4291d960552145
 
 # Analytics
 # google-analytics:
-ga: UA-65933410-1
+# ga: UA-65933410-1
+
+busuanzicount: true
 
 # Copyright Infomation
-startyear: 2015
+startyear: 2016
