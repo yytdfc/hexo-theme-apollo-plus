@@ -1,10 +1,33 @@
 //- LaTex
-script(async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous")
-
+script(type="text/x-mathjax-config")
+    | MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+script(async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" type="text/javascript")
 //- Analytics tracking
 - var ga = theme.ga
 if ga
     script
-        | (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',
-        != '"' + ga + '"'
-        | ,'auto');ga('send','pageview');
+        | (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        | (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        | m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        | })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        | ga('create', '
+        != ga
+        | ','auto');ga('send','pageview');
+
+- var baidu = theme.baidu
+if baidu
+    script
+        | var _hmt = _hmt || [];
+        | (function() {
+        | var hm = document.createElement("script");
+        | hm.src = "https://hm.baidu.com/hm.js?
+        != baidu
+        | ";
+        | var s = document.getElementsByTagName("script")[0];
+        | s.parentNode.insertBefore(hm, s);
+        | })();
+- var tencent = theme.tencent
+if tencent
+    | <script type="text/javascript" src="http://tajs.qq.com/stats?sId=
+    != tencent
+    | " charset="UTF-8"></script>

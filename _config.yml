@@ -18,8 +18,9 @@ cloudTie: b710aea8146b4b82be4291d960552145
 
 # Analytics
 # google-analytics:
-# ga: UA-65933410-1
-
+ga: UA-100648993-1
+baidu: 3a1457089b82f026e9a39fbe773531ff
+tencent: 59104549
 busuanzicount: true
 
 # Copyright Infomation
